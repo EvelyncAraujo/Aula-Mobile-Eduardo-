@@ -3,14 +3,14 @@ import { ref, onMounted } from 'vue';
 import axios from 'axios';
 import { useScreen } from '@/composables/screen';
 const produtos = ref([]);
-const { browserWidth, deviceWidth, isMobile } = useScreen();
+const { isMobile } = useScreen();
+const formatPrice = (price) => `R$ ${price.toFixed(2).replace('.', ',')}`;
 
 onMounted(async () => {
   const response = await axios.get('https://fakestoreapi.com/products');
   produtos.value = response.data;
 });
 
-const formatPrice = (price) => `R$ ${price.toFixed(2).replace('.', ',')}`;
 </script>
 
 <template>
@@ -18,10 +18,10 @@ const formatPrice = (price) => `R$ ${price.toFixed(2).replace('.', ',')}`;
     <h1>Produtos</h1>
     <div class="container">
       <div class="card" v-for="produto in produtos" :key="produto.id">
-                <h1 class="card--title"> Produtos - {{ browserWidth }} - {{ deviceWidth }} - {{
-      isMobile}} 
-      <span v-if="isMobile">É móvel</span></h1>
-        <p>{{ produto.description }}</p>
+                   <h1 class="card--title"> Produtos - {{ isMobile }} 
+       <span v-if="isMobile" style="background-color: green;" > deu certo</span></h1>
+      
+          <p>{{ produto.description }}</p>
         <p>{{ formatPrice(produto.price) }}</p>
         <img class="card--avatar" :src="produto.image" :alt="produto.title" />
       </div>
@@ -78,4 +78,6 @@ const formatPrice = (price) => `R$ ${price.toFixed(2).replace('.', ',')}`;
   font-size: 1.1rem;
   margin-top: 0.5rem;
 }
-</style>
+
+    
+    </style>
