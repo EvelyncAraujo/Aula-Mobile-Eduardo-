@@ -10,18 +10,36 @@ onMounted(async () => {
   const response = await axios.get('https://fakestoreapi.com/products')
   produtos.value = response.data
 })
+function addConditionalClass() {
+  var productList = document.getElementById('product-list')
+  if (window.innerWidth < 768) {
+    productList.classList.add('mobile')
+  } else {
+    productList.classList.remove('mobile')
+  }
+}
+window.onload = addConditionalClass
+window.onresize = addConditionalClass
 </script>
 
 <template>
   <div>
     <h1>Produtos</h1>
     <div class="container">
+      <ul class="product-list">
+        <span v-if="isMobile">
+          <div class="card" v-for="produto in produtos" :key="produto.id">
+            <img class="card--avatar" :src="produto.image" :alt="produto.title" />
+            <p>{{ produto.description }}</p>
+          </div>
+        </span>
+      </ul>
+
       <div class="card" v-for="produto in produtos" :key="produto.id">
         <h1 class="card--title">
           Produtos - {{ isMobile }}
           <span v-if="isMobile" style="background-color: green"> deu certo</span>
         </h1>
-
         <p>{{ produto.description }}</p>
         <p>{{ formatPrice(produto.price) }}</p>
         <img class="card--avatar" :src="produto.image" :alt="produto.title" />
@@ -67,6 +85,7 @@ onMounted(async () => {
   border-radius: 10px;
   margin: auto;
   overflow: hidden;
+  margin-bottom: 2rem;
 }
 .card--avatar {
   width: 100%;
