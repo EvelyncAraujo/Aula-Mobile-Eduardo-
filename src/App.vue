@@ -1,17 +1,16 @@
 <script setup>
 import ListagemProdutos from '@/components/ListagemProdutos.vue';
 import MenuSuperior from '@/components/MenuSuperior.vue';
-import footer from '@/components/footer.vue';
+import FooterComp from '@/components/FooterComp.vue';
 
 </script>
 
 
 <template>
-  <span>Em breve</span>
   <MenuSuperior />
   <ListagemProdutos />
-  <footer />
-</template>
+  <FooterComp></FooterComp>
+ </template>
 
 
 <style scoped>
