@@ -101,3 +101,4 @@ window.onresize = addConditionalClass
   margin-top: 0.5rem;
 }
 </style>
+@/composables/useScreen

@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <footer class="info-loja">
+  <footer class="info-loja" v-if="showFooter">
     <h1 class="infofooter">Informações da empresa:</h1>
     <h2 class="infofooter">dLSDFNKGLDNÇK</h2>
   </footer>

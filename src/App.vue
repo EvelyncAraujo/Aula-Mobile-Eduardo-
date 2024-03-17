@@ -2,15 +2,22 @@
 import ListagemProdutos from '@/components/ListagemProdutos.vue';
 import MenuSuperior from '@/components/MenuSuperior.vue';
 import FooterComp from '@/components/FooterComp.vue';
-
+import { useMonitor } from '@/composables/monitor';
+const { menu } = useMonitor();
 </script>
 
 
 <template>
+  <div>
+    <component :is="menu" />
   <MenuSuperior />
   <ListagemProdutos />
   <FooterComp></FooterComp>
- </template>
+  <main>
+      <router-view />
+    </main>
+</div>
+</template>
 
 
 <style scoped>
