@@ -11,7 +11,7 @@
 <template>
   <header>
     <div class="header--logo">
-      <img src="@/assets/logoFakeStore.png" alt="Logo" />
+      <img src="@/assets/logo.png" alt="Logo" />
       <h1>FakeStore - LG</h1>
     </div>
     <nav>

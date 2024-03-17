@@ -1,7 +1,7 @@
 <script setup>
 import { ref, onMounted } from 'vue'
 import axios from 'axios'
-import { useScreen } from '@/composables/screen'
+import { useScreen } from '@/composables/useScreen'
 const produtos = ref([])
 const { isMobile } = useScreen()
 const formatPrice = (price) => `R$ ${price.toFixed(2).replace('.', ',')}`

@@ -11,8 +11,8 @@
 <template>
   <header>
     <div class="header--logo">
-      <img src="@/assets/logoFakeStore.png" alt="Logo" />
-      <h1>FakeStore - XS</h1>
+      <img src="@/assets/logo.png" alt="Logo" />
+     
     </div>
     <nav>
       <ul :class="menuAberto ? 'menu' : ''">
