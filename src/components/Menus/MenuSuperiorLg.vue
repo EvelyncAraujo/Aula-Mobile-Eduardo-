@@ -33,7 +33,6 @@
 
 <style scoped>
   header {
-    background: #fff;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
     padding: 0.2rem 1rem;
     display: flex;

@@ -13,7 +13,7 @@ const { menu } = useMonitor();
   <MenuSuperior />
   <ListagemProdutos />
   <FooterComp></FooterComp>
-  <main>
+   <main>
       <router-view />
     </main>
 </div>

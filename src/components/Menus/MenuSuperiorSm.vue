@@ -78,7 +78,7 @@
       display: flex;
       flex-direction: column;
       position: absolute;
-      background-color: rgba(255, 255, 255, 0.9);
+      background-color: rgba(110, 36, 36, 0.9);
       box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
       border-radius: 10px;
       right: 0;
