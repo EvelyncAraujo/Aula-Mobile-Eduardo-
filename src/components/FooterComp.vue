@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <footer class="info-loja" v-if="showFooter">
+  <footer class="info-loja" >
     <h1 class="infofooter">Informações da empresa:</h1>
     <h2 class="infofooter">dLSDFNKGLDNÇK</h2>
   </footer>
@@ -14,12 +14,12 @@
   background-color: #6d686867;
   color: rgb(255, 255, 255);
   text-align: center;
-  padding: 10rem;
-  width: 80%;
+  padding: 3rem;
+  width: 100%;
    
 }
-@media only screen and (max-width: 767px) {
-    #rodape {
+@media only screen and (min-width: 767px) {
+    .info-loja {
         display: none; 
     }
 }

@@ -12,10 +12,10 @@ const { menu } = useMonitor();
     <component :is="menu" />
   <MenuSuperior />
   <ListagemProdutos />
-  <FooterComp></FooterComp>
-   <main>
+     <main>
       <router-view />
     </main>
+    <FooterComp></FooterComp>
 </div>
 </template>
 

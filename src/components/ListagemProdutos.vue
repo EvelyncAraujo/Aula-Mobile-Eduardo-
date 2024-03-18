@@ -13,9 +13,9 @@ onMounted(async () => {
 function addConditionalClass() {
   var productList = document.getElementById('product-list')
   if (window.innerWidth < 768) {
-    productList.classList.add('mobile')
+    productList.classList.true('mobile')
   } else {
-    productList.classList.remove('mobile')
+    productList.classList.false('mobile')
   }
 }
 window.onload = addConditionalClass
@@ -101,4 +101,3 @@ window.onresize = addConditionalClass
   margin-top: 0.5rem;
 }
 </style>
-@/composables/useScreen
