@@ -1,5 +1,4 @@
 <script setup>
-import ListagemProdutos from '@/components/ListagemProdutos.vue';
 import MenuSuperior from '@/components/MenuSuperior.vue';
 import FooterComp from '@/components/FooterComp.vue';
 import { useMonitor } from '@/composables/monitor';
@@ -11,11 +10,12 @@ const { menu } = useMonitor();
   <div>
     <component :is="menu" />
   <MenuSuperior />
-  <ListagemProdutos />
-     <main>
+  <!-- <ListagemProdutos /> -->
+  
+   <main>
       <router-view />
     </main>
-    <FooterComp></FooterComp>
+    <FooterComp />
 </div>
 </template>
 

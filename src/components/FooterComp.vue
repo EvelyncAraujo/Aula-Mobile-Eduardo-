@@ -5,7 +5,7 @@
 <template>
   <footer class="info-loja" >
     <h1 class="infofooter">Informações da empresa:</h1>
-    <h2 class="infofooter">dLSDFNKGLDNÇK</h2>
+    <h2 class="infofooter">n sei o que por de informação</h2>
   </footer>
 </template>
 

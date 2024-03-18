@@ -9,6 +9,7 @@
 </script>
 
 <template>
+  
   <header>
     <div class="header--logo">
       <img src="@/assets/logo.png" alt="Logo" />
@@ -28,6 +29,7 @@
       <CartPlus />
       <Menu class="menu-hamburger" @click="menuAberto = !menuAberto" />
     </div>
+   
   </header>
 </template>
 

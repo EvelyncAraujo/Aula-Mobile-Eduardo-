@@ -12,6 +12,7 @@ export function useScreen() {
   };
 
   onMounted(() => {
+    onBrowserResize()
     window.addEventListener('resize', onBrowserResize);
   });
 

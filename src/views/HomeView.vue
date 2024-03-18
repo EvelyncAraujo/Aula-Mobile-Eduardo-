@@ -3,5 +3,5 @@
 </script>
 
 <template>
-  <listagemProdutos />
+  <ListagemProdutos />
 </template>
